@@ -1,5 +1,12 @@
 /*header / title bar*/
 
+:root {
+  --mainBackgroundColour: #ffffff;
+  --mainTextColour: black;
+  --menuBackgroundColour: #111;
+  --headerTextColour: var(--mainBackgroundColour);
+  --menuTextColour: #818181;
+}  
 
 #header {
     color: var(--headerTextColour);
