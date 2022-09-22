@@ -1,5 +1,10 @@
 /* sidebar menu c/o w3schools.com */
 
+function pageSetup() {
+    document.getElementById("sidebarMenu").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    darkMode();
+}
 
 function toggleNav() {
     var x = document.getElementById("sidebarMenu");
@@ -64,10 +69,4 @@ function toggleDarkMode() {
         icon.innerHTML = "dark_mode";
         darkMode();
     }
-}
-
-function pageSetup() {
-    document.getElementById("sidebarMenu").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-    darkMode();
 }
