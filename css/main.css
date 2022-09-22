@@ -19,6 +19,11 @@ body{
     background-color: var(--mainBackgroundColour);
     color: var(--mainTextColour);
 }
+#content a{
+    font-family: 'Libre Baskerville', serif;
+    background-color: var(--mainBackgroundColour);
+    color: var(--mainTextColour);
+}
 
 #main{
     background-color: var(--mainBackgroundColour);
