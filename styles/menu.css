@@ -1,13 +1,5 @@
 /*header and title bar*/
 
-html {
-  --mainBackgroundColour: #ffffff;
-  --mainTextColour: black;
-  --menuBackgroundColour: #111;
-  --headerTextColour: var(--mainBackgroundColour);
-  --menuTextColour: #818181;
-}  
-
 #header {
     color: var(--headerTextColour);
     display: block;
@@ -18,7 +10,8 @@ html {
     width: 100%;
     display: block;
     margin: 0;
-    overflow: auto;
+    overflow: hidden;
+    max-height: 54px;
 }
 #header span{
     padding-top:5px;
@@ -32,10 +25,19 @@ html {
 #header li{
     display: inline-block;
     vertical-align: middle;
+    overflow: hidden;
 }
 #header li a{
     text-decoration: none;
     color: var(--headerTextColour);
+    transition: 0.3s;
+}
+
+.lightBtn{
+  cursor: pointer;
+  float: right;
+  padding-top: 10px;
+  padding-right: 15px;
 }
 
 /* sidebar menu c/o w3schools.com*/
@@ -91,6 +93,8 @@ html {
   
   /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {
-    .sidebar {padding-top: 12px;}
     .sidebar a {font-size: 16px;}
+  }
+  @media screen and (max-width: 625px) {
+    #header li a {font-size: 10px;}
   }

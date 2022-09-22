@@ -6,7 +6,7 @@
     <meta name="description" content="COMP501-5001 Website">
     <meta name="author" content="COMP501 Group 5001">
     <!--Title-->
-    <title>COMP501-5001 Group Home Page</title>
+    <title>Home | Group 5001 COMP501</title>
     <link rel="icon" type="image/x-icon" href="./images/favicon.png">
     <!--Style-->
     <link rel="stylesheet" href="./styles/main.css">
@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 
-<body onload="setNav()">
+<body onload="pageSetup()">
     <!--Sidebar Menu c/o w3schools.com-->
     <!--JavaScript-->
     <script src="script.js"></script>
@@ -44,8 +44,12 @@
                     menu
                     </span>
                 </button></li>
-                <li><a href="./index.html">CTiS Group 5001: Impacts of Technology: Self-driving cars</a></li>
-                <li></li>
+                <li><a href="./index.html">Home | CTiS Group 5001: Impacts of Technology: Self-driving cars</a></li>
+                <li class="lightBtn">
+                    <span id="lightButtonIcon" class="material-symbols-outlined" onclick="toggleDarkMode()">
+                    dark_mode
+                    </span>
+                </li>
             </ul>
         </div>
 
@@ -65,8 +69,8 @@
                 Site info and credits</a><span style="padding: 10px"></span><a href="https://github.com/COMP501-5001/COMP501-5001.github.io"><span id="menuButtonIcon" class="material-symbols-outlined">open_in_new</span>
                 Github repository</a></p>
             <p>CTiS Group 5001: Impacts of Technology</p>
-            <p>© Created by Group 5001.</p>
-            <p>September 2022</p>
+            <p>© Created by Group 5001, except where applicable.</p>
+            <p>September / October 2022</p>
             <p style="color: var(--mainBackgroundColour)">Southern Text</p>
         </div>
     </div>

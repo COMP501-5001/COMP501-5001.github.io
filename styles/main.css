@@ -2,10 +2,10 @@
 
 /*colour settings*/
 html {
-    --mainBackgroundColour: #ffffff;
+    --mainBackgroundColour: white;
     --mainTextColour: black;
     --menuBackgroundColour: #111;
-    --headerTextColour: var(--mainBackgroundColour);
+    --headerTextColour: white;
     --menuTextColour: #818181;
 }  
 
