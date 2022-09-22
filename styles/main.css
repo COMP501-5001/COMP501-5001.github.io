@@ -1,7 +1,7 @@
 /*main stylesheet*/
 
 /*colour settings*/
-:root {
+html {
     --mainBackgroundColour: #ffffff;
     --mainTextColour: black;
     --menuBackgroundColour: #111;

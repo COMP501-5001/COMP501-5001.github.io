@@ -1,6 +1,6 @@
 /*header / title bar*/
 
-:root {
+html {
   --mainBackgroundColour: #ffffff;
   --mainTextColour: black;
   --menuBackgroundColour: #111;
