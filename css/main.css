@@ -19,21 +19,23 @@ body{
     background-color: var(--mainBackgroundColour);
     color: var(--mainTextColour);
 }
-#content a{
-    font-family: 'Libre Baskerville', serif;
-    background-color: var(--mainBackgroundColour);
-    color: var(--mainTextColour);
-}
-
 #main{
     background-color: var(--mainBackgroundColour);
     color: var(--mainTextColour);
+}
+#main hr{
+    border: 1px dotted grey;
 }
 
 /*main page content*/
 #content {
     margin-top: 65px;
     margin-left: 5px;
+}
+#content a{
+    font-family: 'Libre Baskerville', serif;
+    background-color: var(--mainBackgroundColour);
+    color: var(--mainTextColour);
 }
 #content h1, h2, h3, h4{
     text-decoration: none;
