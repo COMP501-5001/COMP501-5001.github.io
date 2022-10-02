@@ -11,11 +11,12 @@
     <!--Style-->
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/menu.css">
-    <link rel="stylesheet" href="../css/infoPageNav.css">
+    <link rel="stylesheet" href="../css/infoPage.css">
     <!--Scripts-->
     <script src="../scripts/script.js"></script>
     <script src="../scripts/menu.js"></script>
     <script src="../scripts/darkmode.js"></script>
+    <script src="../scripts/pagination.js"></script>
     <!--Icons c/o Google-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!--Fonts c/o Google-->
@@ -24,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 
-<body onload="pageSetup()">
+<body onload="pageSetup(); paginationSetup()">
     <!--Sidebar Menu c/o w3schools.com-->
     <!--JavaScript-->
 
@@ -63,17 +64,790 @@
             <h1>Team Info</h1>
             <div id="infoPageNav">
                 <ul id="infoPageList">
-                    <li><button>&lt</button></li>
-                    <li><button>1</button></li>
-                    <li><button>2</button></li>
-                    <li><button>3</button></li>
-                    <li><button>4</button></li>
-                    <li><button>></button></li>
+                    <li><button id="prev" onclick="prevPage()">&lt</button></li>
+                    <li><button id="b1" onclick="setPage(1)">1</button></li>
+                    <li><button id="b2" onclick="setPage(2)">2</button></li>
+                    <li><button id="b3" onclick="setPage(3)">3</button></li>
+                    <li><button id="b4" onclick="setPage(4)">4</button></li>
+                    <li><button id="b5" onclick="setPage(5)">5</button></li>
+                    <li><button id="b6" onclick="setPage(6)">6</button></li>
+                    <li><button id="b7" onclick="setPage(7)">7</button></li>
+                    <li><button id="b8" onclick="setPage(8)">8</button></li>
+                    <li><button id="next" onclick="nextPage()">></button></li>
                 </ul>
             </div>
-            <div class="page" id="1">
-                <h3>Team Contract</h3>
-                <p>Abc123</p>
+            <p style="font-size: 70%; margin-left: 36px;text-align: center;">
+                Contents: Page 1 = Team Contract. Subsequent pages = Meeting records.
+            </p>
+            <div id="infoPages">
+                <div id="1">
+                    <h3>Team Contract</h3>
+                    <p>
+                        <strong>Project name: </strong>
+                        The Safety Concerns of Self-Driving Cars
+                    </p>
+                    <h4 style="margin-bottom: 5px;">Project team members names and sign-off:</h4>
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Sign-off</th>
+                            <th>Role</th>
+                          </tr>
+                          <tr>
+                            <td>Hazel Ahn</td>
+                            <td>Hazel Ahn</td>
+                            <td>Leader</td>
+                          </tr>
+                          <tr>
+                            <td>Jonathan Faire</td>
+                            <td>Jonathan</td>
+                            <td>Developer</td>
+                          </tr>
+                          <tr>
+                            <td>Yoosef Ahmadian</td>
+                            <td>Yoosef</td>
+                            <td>Minute Taker</td>
+                          </tr>
+                    </table>
+                    <p>
+                        <strong>Code of conduct: </strong>
+                        As a project team, we will:
+                        <ul>
+                            <li>
+                                Prioritize and organize the tasks and allocate them to each member.
+                            </li>
+                            <li>
+                                Solve any obstacles or interpersonal problems while collaborating.
+                            </li>
+                            <li>
+                                Ensure to achieve the final goal.
+
+                            </li>
+                        </ul>
+                    </p>
+                    <p>
+                        <strong>Participation: </strong>
+                        We will:
+                        <ul>
+                            <li>
+                                Provide the opportunity to contribute to the project for all team members.
+                            </li>
+                            <li>
+                                Ensure team members are attending the meetings.
+                            </li>
+                            <li>
+                                Contribute and manage workload fairly. 
+                            </li>
+                        </ul>
+                    </p>
+                    <p>
+                        <strong>Communication: </strong>
+                        We will:
+                        <ul>
+                            <li>
+                                Communicate via Discord and centralize the work on Google Drive and Github.
+                            </li>
+                            <li>
+                                Be responsive and keep discussing the projects.
+                            </li>
+                            <li>
+                                Helpful and present in all meetings.
+                            </li>
+                        </ul>
+                    </p>
+                    <p>
+                        <strong>Problem solving: </strong>
+                        We will:
+                        <ul>
+                            <li>
+                                Ask assistance from TA if required.
+                            </li>
+                            <li>
+                                Collaborate on any obstacles we encounter.
+                            </li>
+                            <li>
+                                Support each team member to solve problems.
+                            </li>
+                        </ul>
+                    </p>
+                    <p>
+                        <strong>Meeting guidelines: </strong>
+                        We will:
+                        <ul>
+                            <li>
+                                Take a meeting minutes in every team meeting.
+                            </li>
+                            <li>
+                                Stay focused and active on the meetings.
+                            </li>
+                            <li>
+                                Ensure to have productive meetings. 
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+                <div id="2">
+                    <h3>Meeting 1: 22/09/22</h3>
+                    <p><!--meeting info-->
+                        <table>
+                            <tr>
+                                <th style="text-align: left;">
+                                    Time:
+                                </th>
+                                <td>
+                                    2:20pm
+                                </td>
+                            </tr>
+                                <th style="text-align: left;">
+                                    Duration:
+                                </th>
+                                <td>
+                                    1 hour
+                                </td>
+                            </tr>
+                                <th style="text-align: left;">
+                                    Members present:
+                                </th>
+                                <td>
+                                    3/3
+                                </td>
+                            </tr>
+                        </table>
+                    </p><!--end meeting info-->
+                    <p><!--meeeting agenda-->
+                        <h3>Meeting Agenda:</h3>
+                        What has been planned for this meeting:
+                        <ul>
+                            <li>
+                                Creating a github repository with all members present.
+                            </li>
+                            <li>
+                                Start on the proposal draft.
+                            </li>
+                            <li>
+                                Create and fill out meeting records.
+                            </li>
+                        </ul>
+                    </p><!--end meeting agenda-->
+                    <p><!--discussed topics-->
+                        <h3>Discussed Topics:</h3>
+                        Summary of what was discussed during the meeting:
+                        <ul>
+                            <li>
+                                Making sure we are all on board with the current chosen topic (autonomous cars).
+                            </li>
+                            <li>
+                                Deadlines on which to complete allocated work.
+                            </li>
+                            <li>
+                                Group repository.
+                            </li>
+                        </ul>
+                    </p><!--end discussed topics-->
+                    <p><!--issues raised-->
+                        <h3>Issues raised:</h3>
+                        Any concerns had by us or our client:
+                        <ul>
+                            <li>
+                                Hazel - If we want to use a team repository or a local drive.
+                            </li>
+                        </ul>
+                    </p><!--end issues raised-->
+                    <p><!--assigned tasks-->
+                        <h3>Assigned tasks:</h3>
+                        Any tasks that have been assigned to members following this meeting:
+                        <ul>
+                            <li>
+                                Jonathan - Developer. Create a repository and write about  why we have chosen the topic of autonomous cars.
+                            </li>
+                            <li>
+                                Yoosef - Minute taker. Outline the team members' roles and responsibilities.
+                            </li>
+                            <li>
+                                Hazel - Project manager.
+                            </li>
+                        </ul>
+                    </p><!--end assigned tasks-->
+                    <p> <!--next meeting-->
+                        <h3>Next meeting:</h3>
+                        An agenda and date/time for our next meeting:
+                        <ul>
+                            <li>
+                                23/09/22 (Friday) @ 3:00 PM - in person lab session.
+                            </li>
+                        </ul>
+                    </p><!--end next meeting-->
+                </div>
+                <div id="3">
+                    <h3>Meeting 2: 23/09/22</h3>
+                    <p><!--meeting info-->
+                        <table>
+                            <tr>
+                                <th style="text-align: left;">
+                                    Time:
+                                </th>
+                                <td>
+                                    3:22pm
+                                </td>
+                            </tr>
+                                <th style="text-align: left;">
+                                    Duration:
+                                </th>
+                                <td>
+                                    1 hour
+                                </td>
+                            </tr>
+                                <th style="text-align: left;">
+                                    Members present:
+                                </th>
+                                <td>
+                                    3/3
+                                </td>
+                            </tr>
+                        </table>
+                    </p><!--end meeting info-->
+                    <p><!--meeeting agenda-->
+                        <h3>Meeting Agenda:</h3>
+                        What has been planned for this meeting:
+                        <ul>
+                            <li>
+                                Get feedback From Waldo regarding proposal draft.
+                            </li>
+                            <li>
+                                Finish the proposal draft.
+                            </li>
+                            <li>
+                                Start creating the website.
+                            </li>
+                        </ul>
+                    </p><!--end meeting agenda-->
+                    <p><!--discussed topics-->
+                        <h3>Discussed Topics:</h3>
+                        Summary of what was discussed during the meeting:
+                        <ul>
+                            <li>
+                                Got the approval from Waldo regarding the proposal topic.
+                            </li>
+                        </ul>
+                    </p><!--end discussed topics-->
+                    <p><!--issues raised-->
+                        <h3>Issues raised:</h3>
+                        Any concerns had by us or our client:
+                        <ul>
+                            <li>
+                                None
+                            </li>
+                        </ul>
+                    </p><!--end issues raised-->
+                    <p><!--assigned tasks-->
+                        <h3>Assigned tasks:</h3>
+                        Any tasks that have been assigned to members following this meeting:
+                        <ul>
+                            <li>
+                                Everyone - Continue development of website
+                            </li>
+                        </ul>
+                    </p><!--end assigned tasks-->
+                    <p> <!--next meeting-->
+                        <h3>Next meeting:</h3>
+                        An agenda and date/time for our next meeting:
+                        <ul>
+                            <li>
+                                Unknown at time of writing
+                            </li>
+                        </ul>
+                    </p><!--end next meeting-->
+                </div>
+                <div id="4">
+                    <h3>Meeting x: date</h3>
+                    <p><!--meeting info-->
+                        <table>
+                            <tr>
+                                <th style="text-align: left;">
+                                    Time:
+                                </th>
+                                <td>
+                                    time of day
+                                </td>
+                            </tr>
+                                <th style="text-align: left;">
+                                    Duration:
+                                </th>
+                                <td>
+                                    hrs or mins
+                                </td>
+                            </tr>
+                                <th style="text-align: left;">
+                                    Members present:
+                                </th>
+                                <td>
+                                    x/y
+                                </td>
+                            </tr>
+                        </table>
+                    </p><!--end meeting info-->
+                    <p><!--meeeting agenda-->
+                        <h3>Meeting Agenda:</h3>
+                        What has been planned for this meeting:
+                        <ul>
+                            <li>
+                                item 1
+                            </li>
+                            <li>
+                                item 2
+                            </li>
+                            <li>
+                                item 3
+                            </li>
+                        </ul>
+                    </p><!--end meeting agenda-->
+                    <p><!--discussed topics-->
+                        <h3>Discussed Topics:</h3>
+                        Summary of what was discussed during the meeting:
+                        <ul>
+                            <li>
+                                item 1
+                            </li>
+                            <li>
+                                item 2
+                            </li>
+                            <li>
+                                item 3
+                            </li>
+                        </ul>
+                    </p><!--end discussed topics-->
+                    <p><!--issues raised-->
+                        <h3>Issues raised:</h3>
+                        Any concerns had by us or our client:
+                        <ul>
+                            <li>
+                                item 1
+                            </li>
+                            <li>
+                                item 2
+                            </li>
+                            <li>
+                                item 3
+                            </li>
+                        </ul>
+                    </p><!--end issues raised-->
+                    <p><!--assigned tasks-->
+                        <h3>Assigned tasks:</h3>
+                        Any tasks that have been assigned to members following this meeting:
+                        <ul>
+                            <li>
+                                item 1
+                            </li>
+                            <li>
+                                item 2
+                            </li>
+                            <li>
+                                item 3
+                            </li>
+                        </ul>
+                    </p><!--end assigned tasks-->
+                    <p> <!--next meeting-->
+                        <h3>Next meeting:</h3>
+                        An agenda and date/time for our next meeting:
+                        <ul>
+                            <li>
+                                item 1
+                            </li>
+                        </ul>
+                    </p><!--end next meeting-->
+                </div>
+                <div id="5">
+                    <h3>Meeting x: date</h3>
+                    <p><!--meeting info-->
+                        <table>
+                            <tr>
+                                <th style="text-align: left;">
+                                    Time:
+                                </th>
+                                <td>
+                                    time of day
+                                </td>
+                            </tr>
+                                <th style="text-align: left;">
+                                    Duration:
+                                </th>
+                                <td>
+                                    hrs or mins
+                                </td>
+                            </tr>
+                                <th style="text-align: left;">
+                                    Members present:
+                                </th>
+                                <td>
+                                    x/y
+                                </td>
+                            </tr>
+                        </table>
+                    </p><!--end meeting info-->
+                    <p><!--meeeting agenda-->
+                        <h3>Meeting Agenda:</h3>
+                        What has been planned for this meeting:
+                        <ul>
+                            <li>
+                                item 1
+                            </li>
+                            <li>
+                                item 2
+                            </li>
+                            <li>
+                                item 3
+                            </li>
+                        </ul>
+                    </p><!--end meeting agenda-->
+                    <p><!--discussed topics-->
+                        <h3>Discussed Topics:</h3>
+                        Summary of what was discussed during the meeting:
+                        <ul>
+                            <li>
+                                item 1
+                            </li>
+                            <li>
+                                item 2
+                            </li>
+                            <li>
+                                item 3
+                            </li>
+                        </ul>
+                    </p><!--end discussed topics-->
+                    <p><!--issues raised-->
+                        <h3>Issues raised:</h3>
+                        Any concerns had by us or our client:
+                        <ul>
+                            <li>
+                                item 1
+                            </li>
+                            <li>
+                                item 2
+                            </li>
+                            <li>
+                                item 3
+                            </li>
+                        </ul>
+                    </p><!--end issues raised-->
+                    <p><!--assigned tasks-->
+                        <h3>Assigned tasks:</h3>
+                        Any tasks that have been assigned to members following this meeting:
+                        <ul>
+                            <li>
+                                item 1
+                            </li>
+                            <li>
+                                item 2
+                            </li>
+                            <li>
+                                item 3
+                            </li>
+                        </ul>
+                    </p><!--end assigned tasks-->
+                    <p> <!--next meeting-->
+                        <h3>Next meeting:</h3>
+                        An agenda and date/time for our next meeting:
+                        <ul>
+                            <li>
+                                item 1
+                            </li>
+                        </ul>
+                    </p><!--end next meeting-->
+                </div>
+                <div id="6">
+                    <h3>Meeting x: date</h3>
+                    <p><!--meeting info-->
+                        <table>
+                            <tr>
+                                <th style="text-align: left;">
+                                    Time:
+                                </th>
+                                <td>
+                                    time of day
+                                </td>
+                            </tr>
+                                <th style="text-align: left;">
+                                    Duration:
+                                </th>
+                                <td>
+                                    hrs or mins
+                                </td>
+                            </tr>
+                                <th style="text-align: left;">
+                                    Members present:
+                                </th>
+                                <td>
+                                    x/y
+                                </td>
+                            </tr>
+                        </table>
+                    </p><!--end meeting info-->
+                    <p><!--meeeting agenda-->
+                        <h3>Meeting Agenda:</h3>
+                        What has been planned for this meeting:
+                        <ul>
+                            <li>
+                                item 1
+                            </li>
+                            <li>
+                                item 2
+                            </li>
+                            <li>
+                                item 3
+                            </li>
+                        </ul>
+                    </p><!--end meeting agenda-->
+                    <p><!--discussed topics-->
+                        <h3>Discussed Topics:</h3>
+                        Summary of what was discussed during the meeting:
+                        <ul>
+                            <li>
+                                item 1
+                            </li>
+                            <li>
+                                item 2
+                            </li>
+                            <li>
+                                item 3
+                            </li>
+                        </ul>
+                    </p><!--end discussed topics-->
+                    <p><!--issues raised-->
+                        <h3>Issues raised:</h3>
+                        Any concerns had by us or our client:
+                        <ul>
+                            <li>
+                                item 1
+                            </li>
+                            <li>
+                                item 2
+                            </li>
+                            <li>
+                                item 3
+                            </li>
+                        </ul>
+                    </p><!--end issues raised-->
+                    <p><!--assigned tasks-->
+                        <h3>Assigned tasks:</h3>
+                        Any tasks that have been assigned to members following this meeting:
+                        <ul>
+                            <li>
+                                item 1
+                            </li>
+                            <li>
+                                item 2
+                            </li>
+                            <li>
+                                item 3
+                            </li>
+                        </ul>
+                    </p><!--end assigned tasks-->
+                    <p> <!--next meeting-->
+                        <h3>Next meeting:</h3>
+                        An agenda and date/time for our next meeting:
+                        <ul>
+                            <li>
+                                item 1
+                            </li>
+                        </ul>
+                    </p><!--end next meeting-->
+                </div>
+                <div id="7">
+                    <h3>Meeting x: date</h3>
+                    <p><!--meeting info-->
+                        <table>
+                            <tr>
+                                <th style="text-align: left;">
+                                    Time:
+                                </th>
+                                <td>
+                                    time of day
+                                </td>
+                            </tr>
+                                <th style="text-align: left;">
+                                    Duration:
+                                </th>
+                                <td>
+                                    hrs or mins
+                                </td>
+                            </tr>
+                                <th style="text-align: left;">
+                                    Members present:
+                                </th>
+                                <td>
+                                    x/y
+                                </td>
+                            </tr>
+                        </table>
+                    </p><!--end meeting info-->
+                    <p><!--meeeting agenda-->
+                        <h3>Meeting Agenda:</h3>
+                        What has been planned for this meeting:
+                        <ul>
+                            <li>
+                                item 1
+                            </li>
+                            <li>
+                                item 2
+                            </li>
+                            <li>
+                                item 3
+                            </li>
+                        </ul>
+                    </p><!--end meeting agenda-->
+                    <p><!--discussed topics-->
+                        <h3>Discussed Topics:</h3>
+                        Summary of what was discussed during the meeting:
+                        <ul>
+                            <li>
+                                item 1
+                            </li>
+                            <li>
+                                item 2
+                            </li>
+                            <li>
+                                item 3
+                            </li>
+                        </ul>
+                    </p><!--end discussed topics-->
+                    <p><!--issues raised-->
+                        <h3>Issues raised:</h3>
+                        Any concerns had by us or our client:
+                        <ul>
+                            <li>
+                                item 1
+                            </li>
+                            <li>
+                                item 2
+                            </li>
+                            <li>
+                                item 3
+                            </li>
+                        </ul>
+                    </p><!--end issues raised-->
+                    <p><!--assigned tasks-->
+                        <h3>Assigned tasks:</h3>
+                        Any tasks that have been assigned to members following this meeting:
+                        <ul>
+                            <li>
+                                item 1
+                            </li>
+                            <li>
+                                item 2
+                            </li>
+                            <li>
+                                item 3
+                            </li>
+                        </ul>
+                    </p><!--end assigned tasks-->
+                    <p> <!--next meeting-->
+                        <h3>Next meeting:</h3>
+                        An agenda and date/time for our next meeting:
+                        <ul>
+                            <li>
+                                item 1
+                            </li>
+                        </ul>
+                    </p><!--end next meeting-->
+                </div>
+                <div id="8">
+                    <h3>Meeting x: date</h3>
+                    <p><!--meeting info-->
+                        <table>
+                            <tr>
+                                <th style="text-align: left;">
+                                    Time:
+                                </th>
+                                <td>
+                                    time of day
+                                </td>
+                            </tr>
+                                <th style="text-align: left;">
+                                    Duration:
+                                </th>
+                                <td>
+                                    hrs or mins
+                                </td>
+                            </tr>
+                                <th style="text-align: left;">
+                                    Members present:
+                                </th>
+                                <td>
+                                    x/y
+                                </td>
+                            </tr>
+                        </table>
+                    </p><!--end meeting info-->
+                    <p><!--meeeting agenda-->
+                        <h3>Meeting Agenda:</h3>
+                        What has been planned for this meeting:
+                        <ul>
+                            <li>
+                                item 1
+                            </li>
+                            <li>
+                                item 2
+                            </li>
+                            <li>
+                                item 3
+                            </li>
+                        </ul>
+                    </p><!--end meeting agenda-->
+                    <p><!--discussed topics-->
+                        <h3>Discussed Topics:</h3>
+                        Summary of what was discussed during the meeting:
+                        <ul>
+                            <li>
+                                item 1
+                            </li>
+                            <li>
+                                item 2
+                            </li>
+                            <li>
+                                item 3
+                            </li>
+                        </ul>
+                    </p><!--end discussed topics-->
+                    <p><!--issues raised-->
+                        <h3>Issues raised:</h3>
+                        Any concerns had by us or our client:
+                        <ul>
+                            <li>
+                                item 1
+                            </li>
+                            <li>
+                                item 2
+                            </li>
+                            <li>
+                                item 3
+                            </li>
+                        </ul>
+                    </p><!--end issues raised-->
+                    <p><!--assigned tasks-->
+                        <h3>Assigned tasks:</h3>
+                        Any tasks that have been assigned to members following this meeting:
+                        <ul>
+                            <li>
+                                item 1
+                            </li>
+                            <li>
+                                item 2
+                            </li>
+                            <li>
+                                item 3
+                            </li>
+                        </ul>
+                    </p><!--end assigned tasks-->
+                    <p> <!--next meeting-->
+                        <h3>Next meeting:</h3>
+                        An agenda and date/time for our next meeting:
+                        <ul>
+                            <li>
+                                item 1
+                            </li>
+                        </ul>
+                    </p><!--end next meeting-->
+                </div>
             </div>
         </div>
 
