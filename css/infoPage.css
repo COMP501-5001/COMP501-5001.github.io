@@ -1,0 +1,26 @@
+#infoPageNav {
+    text-align: center;
+}
+#infoPageNav li{
+    display: inline-block;
+}
+#infoPageNav button{
+    background-color: var(--mainBackgroundColour);
+    border: 1px solid var(--mainTextColour);
+    color: var(--mainTextColour);
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+#infoPageNav button:hover{
+    background-color: var(--hoverColour);
+}
+#infoPages div{
+    display: none;
+}
+
+#infoPageNav .buttonActive{
+    background-color: var(--hoverColour);
+}
