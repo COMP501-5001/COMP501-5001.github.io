@@ -7,6 +7,7 @@ html {
     --menuBackgroundColour: #111;
     --headerTextColour: white;
     --menuTextColour: #818181;
+    --hoverColour: var(--menuTextColour);
 }  
 
 /*Fonts ive added:
@@ -42,6 +43,16 @@ body{
 }
 #content p{
     text-decoration: none;
+}
+#content table{
+    border: 1px dotted var(--mainTextColour);
+}
+#content th, td{
+    border: 1px solid var(--mainTextColour);
+    padding: 5px;
+}
+#content li{
+    padding: 2px;
 }
 
 /*footer*/
