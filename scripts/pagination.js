@@ -10,6 +10,7 @@ function paginationSetup()
     console.log("teamInfoLastPage =" + localStorage.getItem("teamInfoLastPage"));
     document.getElementById(page).style.display= "block";
     document.getElementById("b" + page).className = "buttonActive";
+    document.getElementById("bb" + page).className = "buttonActive";
 }
 
 function setPage(page)
@@ -18,12 +19,14 @@ function setPage(page)
     localStorage.setItem("teamInfoLastPage", page);
     document.getElementById(page).style.display = "block";
     document.getElementById("b" + page).className = "buttonActive";
+    document.getElementById("bb" + page).className = "buttonActive";
 
     for (let i = 1; i <= totalPages; i++)
     {
         if (i != page)
         {
             document.getElementById("b" + i).classList.remove("buttonActive");
+            document.getElementById("bb" + i).classList.remove("buttonActive");
             document.getElementById(i).style.display = "none";
         }
     }
@@ -61,4 +64,10 @@ function nextPage()
             }
         }
     } 
+}
+
+function scrollToTop()
+{
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
