@@ -1,5 +1,11 @@
 const totalPages = 8;
 
+function scrollToTop() //from w3schools
+{
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
 function paginationSetup()
 {
     if (localStorage.getItem("teamInfoLastPage") === null)
@@ -64,10 +70,4 @@ function nextPage()
             }
         }
     } 
-}
-
-function scrollToTop() //from w3schools
-{
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
