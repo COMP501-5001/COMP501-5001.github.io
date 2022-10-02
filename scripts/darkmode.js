@@ -4,7 +4,7 @@ function darkMode() {
     
     if (localStorage.getItem("darkMode") === null)
     {
-        localStorage.setItem("darkMode","false");
+        localStorage.setItem("darkMode", "true");
     }
 
     if (localStorage.getItem("darkMode") === "false") 
