@@ -14,7 +14,9 @@ html {
     font-family: 'Crimson Text', serif;
     font-family: 'Libre Baskerville', serif;
     font-family: 'Playfair Display', serif;
-*/
+
+
+>> Basic page setup:    */
 body{
     font-family: 'Libre Baskerville', serif;
     background-color: var(--mainBackgroundColour);
@@ -30,12 +32,10 @@ button{
     display: inline-block;
     cursor: pointer;
 }
-
 .center{
     text-align: center;
     margin: auto;
 }
-
 #error404div {
     width: 60%;
 }
