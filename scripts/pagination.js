@@ -47,7 +47,7 @@ function prevPage()
             if (i != 1)
             {
                 console.log("changing page to: " + i - 1);
-                localStorage.setItem("teamInfoPage", i - 1);
+                localStorage.setItem("teamInfoLastPage", i - 1);
                 setPage(i - 1);
                 break;
             }
