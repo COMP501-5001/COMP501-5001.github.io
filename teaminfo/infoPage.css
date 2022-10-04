@@ -17,6 +17,9 @@
 #infoPageNav button:hover{
     background-color: var(--hoverColour);
 }
+#infoPageList{
+    margin-right: 6%;
+}
 #infoPages div{
     display: none;
 }
