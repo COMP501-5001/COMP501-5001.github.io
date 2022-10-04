@@ -1,3 +1,4 @@
 #ignore all ds store
 .DS_Store
 .vscode/settings.json
+Thumbs.db
