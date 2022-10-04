@@ -18,7 +18,7 @@
     background-color: var(--hoverColour);
 }
 #infoPageList{
-    margin-right: 6%;
+    margin-right: 35px;
 }
 #infoPages div{
     display: none;
