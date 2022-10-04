@@ -20,6 +20,17 @@ body{
     background-color: var(--mainBackgroundColour);
     color: var(--mainTextColour);
 }
+button{
+    background-color: var(--mainBackgroundColour);
+    border: 1px solid var(--mainTextColour);
+    color: var(--mainTextColour);
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
 #main{
     background-color: var(--mainBackgroundColour);
     color: var(--mainTextColour);
@@ -37,6 +48,9 @@ body{
     font-family: 'Libre Baskerville', serif;
     background-color: var(--mainBackgroundColour);
     color: var(--mainTextColour);
+}
+#content a:hover{
+    cursor: pointer;
 }
 #content h1, h2, h3, h4{
     text-decoration: none;
@@ -68,7 +82,7 @@ body{
     font-size: 100%;
 }
 #footer p a{
-    color:var(--mainTextColour);
+    color: var(--mainTextColour);
 }
 
 .material-symbols-outlined {

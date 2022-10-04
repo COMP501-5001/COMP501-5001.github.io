@@ -1,3 +1,5 @@
+/* sidebar menu c/o w3schools.com */
+
 function toggleNav() {
     var x = document.getElementById("sidebarMenu");
     var icon = document.getElementById("menuButtonIcon");
