@@ -40,6 +40,19 @@
   padding-right: 15px;
 }
 
+/* not sure if im gonna use these or not
+#sidebarMenu hr{
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px dotted var(--menuTextColour);
+}
+#sidebarMenu p{
+  margin-left: 10px;
+  padding: 0px;
+  color: var(--menuTextColour);
+}
+*/
+
 /* sidebar menu c/o w3schools.com*/
 .sidebar .active {
     color: var(--headerTextColour);
