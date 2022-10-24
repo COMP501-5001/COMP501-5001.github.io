@@ -6,7 +6,7 @@ function toggleNav() {
     
     if (x.style.width === "0px") 
     {
-        x.style.width = "250px";
+        x.style.width = "290px";
         icon.innerHTML = "close";
     } 
     else 
