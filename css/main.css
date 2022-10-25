@@ -40,7 +40,6 @@ button{
     width: 60%;
 }
 
-
 #main{
     background-color: var(--mainBackgroundColour);
     color: var(--mainTextColour);
@@ -54,6 +53,18 @@ button{
     margin-top: 65px;
     margin-left: 5px;
 }
+
+#content p, #content h3, #content h4{
+    margin-top: 1rem; 
+    margin-bottom: 1rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+ }
+ #content li {
+     margin-left: 10rem;
+    margin-right: 10rem;
+ }
+
 #content a{
     font-family: 'Libre Baskerville', serif;
     background-color: var(--mainBackgroundColour);
